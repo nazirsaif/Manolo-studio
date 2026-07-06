@@ -13,7 +13,7 @@ export default function ContactForm() {
 
     const formData = new FormData(e.currentTarget);
     // Add the Web3Forms Access Key here!
-    formData.append("access_key", "534ca3d1-cb09-4544-9a52-18257048a84f");
+    formData.append("access_key", "cba68084-587a-4c6e-af40-ea9f15ab8a7a");
     
     // Optional settings for Web3Forms
     formData.append("subject", "New Project Inquiry from Monalo Studio Website");
