@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import ContactForm from "./ContactForm";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
@@ -68,45 +69,15 @@ export default function HeroSection() {
           </motion.div>
         </div>
         
-        {/* Visual Content (Vertical Video) */}
+        {/* Visual Content (Contact Form) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative flex items-center justify-center w-full mx-auto lg:mx-0 py-8 lg:py-0"
+          className="relative w-full mx-auto lg:mx-0 py-8 lg:py-0 z-20"
         >
-          {/* Wrapper for video to handle aspect ratio and floating badge */}
-          <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] aspect-[9/16]">
-            {/* Abstract 2D neo-brutalist container */}
-            <div className="absolute inset-0 bg-secondary border-4 border-foreground hard-shadow overflow-hidden flex items-center justify-center rounded-sm">
-              <video 
-                src="/intro%20video.mp4" 
-                className="w-full h-full object-cover"
-                controls
-                autoPlay
-                loop
-                playsInline
-                title="Traditional Intro Video"
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            
-            {/* Floating badge */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-8 bg-accent border-4 border-foreground p-3 sm:p-4 flex items-center gap-3 sm:gap-4 hard-shadow z-30 transform rotate-3"
-            >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white border-2 border-foreground flex items-center justify-center text-xl shadow-[2px_2px_0_0_#1A1A1A]">
-                ⭐
-              </div>
-              <div>
-                <p className="text-sm sm:text-base font-black text-foreground uppercase leading-none mb-1">Top Rated</p>
-                <p className="text-xs font-bold text-foreground/70 uppercase tracking-widest leading-none">Agency 2026</p>
-              </div>
-            </motion.div>
+          <div className="transform rotate-1 hover:rotate-0 transition-transform duration-300">
+            <ContactForm />
           </div>
         </motion.div>
       </div>
