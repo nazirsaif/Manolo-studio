@@ -123,9 +123,10 @@ export default function ContactForm() {
                 id="budget" 
                 name="budget" 
                 required
+                defaultValue=""
                 className="w-full bg-background border-2 border-foreground p-3 focus:outline-none focus:ring-4 focus:ring-primary/20 transition-all font-medium appearance-none cursor-pointer"
               >
-                <option value="" disabled selected>Select a budget...</option>
+                <option value="" disabled>Select a budget...</option>
                 <option value="$1,000 - $3,000">$1,000 - $3,000</option>
                 <option value="$3,000 - $5,000">$3,000 - $5,000</option>
                 <option value="$5,000 - $10,000">$5,000 - $10,000</option>
